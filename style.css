@@ -1,0 +1,284 @@
+:root {
+    --primary-color: #0066FF; /* Azul forte principal */
+    --accent-color: #00A3FF;  /* Azul vivo de destaque/hover */
+    --bg-light: #EAF4FF;      /* Fundo da página */
+    --bg-card: #F0F7FF;       /* Fundo dos blocos/cards */
+    --text-dark: #172B4D;
+    --border-radius: 5px;
+    --transition-fast: 0.3s;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+}
+
+p {
+    line-height: 1.6;
+}
+
+/* 2. PADRONIZAÇÃO DE CORES E TEXTOS */
+header .periodo, .bloco-guerra span {
+    color: #6482A8;
+}
+
+header, nav {
+    text-align: center;
+}
+
+header h1, header .periodo, .texto-destaque h2, .texto-destaque h3,
+section h2, article h3, .titulo-acordeao, .bloco-guerra h2, .bloco-guerra h3,
+.conteudo-guerra h3, .anos button, .evento h4, #progresso, #alternativas button {
+    color: var(--primary-color);
+}
+
+header {
+    background-color: var(--bg-light);
+    padding: 35px 20px 10px;
+}
+
+header h1 { margin: 0; font-size: 46px; }
+header .periodo { font-size: 20px; margin: 10px 0 30px; }
+
+nav {
+    background-color: white;
+    padding: 15px;
+    border-bottom: 1px solid #B8D8FF;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: var(--primary-color);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+}
+
+main {
+    width: 85%;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section {
+    background-color: white;
+    margin: 10px 0 30px;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+section h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+}
+
+article, .conteudo-guerra, .evento {
+    background-color: var(--bg-card);
+    padding: 20px;
+    margin-top: 20px;
+    border-left: 5px solid var(--primary-color);
+    border-radius: var(--border-radius);
+}
+
+article h3, .conteudo-guerra h3, .evento h4 {
+    margin-top: 0;
+}
+
+.destaque-inicio {
+    max-width: 1000px;
+    margin: 25px auto 0;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.destaque-inicio img {
+    width: 430px;
+    max-width: 48%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.texto-destaque {
+    flex: 1;
+    text-align: left;
+}
+
+.texto-destaque h2 { font-size: 28px; margin: 0 0 15px; }
+.texto-destaque h3 { font-size: 24px; margin: 0 0 15px; }
+.texto-destaque p { font-size: 18px; }
+
+/* Acordeão */
+.titulo-acordeao {
+    width: 100%;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.titulo-acordeao span { font-size: 24px; }
+.conteudo-acordeao { display: none; margin-top: 15px; }
+
+/* Blocos de Guerra (Eixo e Aliados) */
+.blocos-guerra {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.bloco-guerra {
+    width: 280px;
+    min-height: 150px;
+    background-color: white;
+    border: 1px solid #B8D8FF;
+    border-radius: 10px;
+    padding: 25px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.12);
+    transition: var(--transition-fast);
+}
+
+.bloco-guerra:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary-color);
+}
+
+.bloco-guerra h3 { margin-top: 0; font-size: 22px; }
+.bloco-guerra p { font-size: 16px; }
+.bloco-guerra span { font-size: 13px; }
+.seta-guerra { font-size: 35px; color: #70B5FF; }
+.conteudo-guerra { display: none; }
+
+/* Linha do Tempo */
+.linha-tempo { margin-top: 40px; }
+
+.anos {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 35px 20px 40px;
+}
+
+.anos::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    right: 5%;
+    height: 3px;
+    background-color: #9CCAFF;
+    z-index: 0;
+}
+
+.anos button {
+    position: relative;
+    z-index: 1;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: white;
+    border: 3px solid var(--primary-color);
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+.anos button:hover, .anos button.ativo {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.anos button:hover { transform: translateY(-2px); }
+.anos button.ativo { transform: scale(1.12); }
+.evento { display: none; }
+.evento h4 { font-size: 19px; }
+
+/* COMPONENTE DO QUIZ E RODAPÉ */
+#quiz-container { margin-top: 20px; }
+#progresso { font-weight: bold; }
+
+#alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+#alternativas button {
+    padding: 12px;
+    border: 1px solid var(--primary-color);
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+}
+
+#alternativas button:hover { background-color: #D6E9FF; }
+
+#alternativas button.correta {
+    background-color: #D4EDDA;
+    border-color: #2e7d32;
+    color: #1b5e20;
+}
+
+#alternativas button.errada {
+    background-color: #F8D7DA;
+    border-color: #c62828;
+    color: #8e0000;
+}
+
+#alternativas button:disabled { cursor: default; }
+
+#feedback {
+    margin-top: 15px;
+    padding: 12px;
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+    font-weight: bold;
+}
+
+#proxima, #refazer {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#proxima { display: none; }
+#refazer { font-weight: bold; }
+
+#proxima:hover, #refazer:hover {
+    background-color: var(--accent-color);
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}

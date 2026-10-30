@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progressão Geométrica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- MENU -->
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="pa.html">PA</a>
+        <a href="pg.html">PG</a>
+        <a href="soma.html">Soma dos termos</a>
+        <a href="quiz.html">Quiz</a>
+    </nav>
+
+    <main>
+
+        <section>
+
+            <section>
+
+    <h2>Progressão Geométrica</h2>
+
+    <div class="destaque-inicio">
+
+        <img src="imagem/PG.png" alt="fórmula da pg">
+
+        <div class="texto-destaque">
+
+            <h3>O que é progressão geométrica</h3>
+
+            <p>
+                A Progressão Geométrica (PG) é uma sequência numérica em que cada termo, a partir do segundo, é obtido pela multiplicação 
+                do termo anterior por um número fixo chamado razão (q).
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- O restante do conteúdo da página continua aqui -->
+
+            <!-- EIXO E ALIADOS -->
+
+             <div class="blocos-guerra">
+
+                <button class="bloco-guerra" onclick="mostrarBlocoGuerra('eixo')">
+                    <h3>Como identificar</h3>
+
+                    <p>
+                        Progressão Geométrica
+                    </p>
+
+                    <span>Clique para saber mais</span>
+                </button>
+
+                <div class="seta-guerra">
+                    →
+                </div>
+
+                <button class="bloco-guerra" onclick="mostrarBlocoGuerra('aliados')">
+                    <h3>Termo Geral</h3>
+
+                    <p>
+                        Como calcular
+                    </p>
+
+                    <span>Clique para saber mais</span>
+                </button>
+
+            </div>
+
+            <!-- CONTEÚDO DO EIXO -->
+
+            <div id="eixo" class="conteudo-guerra">
+
+                <h3>Como identificar uma PG?</h3>
+
+                <p>
+                    Uma PG é uma sequência numérica em que cada termo é obtido pela multiplicação do termo anterior por um número fixo, 
+                    chamado razão q.
+                    Como identificar: divida um termo pelo anterior. Se o resultado for sempre o mesmo, a sequência é uma PG.
+                </p>
+
+                <p>
+                    Exemplo: 2, 6, 18, 54, 162...</p>
+
+                <p>
+                    6 dividido 2 = 3</p>
+
+                <p>18 dividido 6 = 3</p>
+                <p>54 dividido 18 = 3</p>
+                <p>Como o resultado é sempre 3, essa sequência é uma PG de razão q = 3.</p>
+
+                <p><strong>Atenção para o ENEM:</strong>
+                    Não confunda PA com PG! Na PA, somamos ou subtraímos
+                    sempre o mesmo valor; na PG, multiplicamos ou dividimos
+                    sempre pelo mesmo valor. Se os termos estiverem aumentando
+                    ou diminuindo muito rapidamente, investigue se há uma
+                    multiplicação por uma razão constante. Isso pode indicar uma PG.
+                </p>
+
+            </div>
+
+            <!-- CONTEÚDO DOS ALIADOS -->
+
+            <div id="aliados" class="conteudo-guerra">
+
+                <h3>Potências Aliadas</h3>
+
+                <p>
+                    O termo geral da PG é uma fórmula que permite encontrar
+                    qualquer termo de uma sequência geométrica sem precisar 
+                    calcular todos os termos anteriores.
+                </p>
+
+                <p>
+                    Formula: a<sub>n</sub> = a<sub>1</sub> . q<sup>n-1</sup>
+                </p>
+
+                <p>a<sub>n</sub>: termo que queremos descobrir.</p>
+                <p>a<sub>1</sub>: primeiro termo da PG.</p>
+                <p> q: razão da PG.</p>
+                <p>n: posição do termo desejado.</p> 
+
+                <p><strong>Atenção para o ENEM:</strong>
+                    Fique atento a expressões como “aumenta 10% a cada mês” ou
+                    “dobra a cada período”. Elas indicam uma possível PG,
+                    pois o valor é multiplicado por uma razão constante.
+                </p>
+                
+
+            </div>
+
+            
+
+            </div>
+
+            
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>
+            Colégio São Luiz - unidade 3 -
+            Isabella Astor e João Victor 3ºB
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
